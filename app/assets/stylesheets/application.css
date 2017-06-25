@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bulma";
+@import "font-awesome";
+
+body {
+    background: url('sativa.png') repeat;
+    min-height: 100vh;
+}

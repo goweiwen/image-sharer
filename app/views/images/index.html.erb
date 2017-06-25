@@ -1,0 +1,9 @@
+<%= render 'shared/header' %>
+
+<section class="container">
+  <%= form_for @image do |f| %>
+    <%= f.label 'Upload a file' %>
+    <%= f.attachment_field :src, presigned: true %>
+    <%= f.submit %>
+  <% end %>
+</section>

@@ -1,0 +1,20 @@
+<nav class="nav has-shadow">
+  <div class="container">
+    <div class="nav-left">
+      <a class="nav-item">
+        <h1>Cookpad Images</h1>
+      </a>
+    </div>
+    <div class="nav-right">
+      <a class="nav-item">
+        <i class="fa fa-github"></i>
+      </a>
+      <% if current_user.nil? %>
+        <%= link_to 'Log in', :login, class: 'nav-item' %>
+      <% else %>
+        <%= link_to current_user['email'], { controller: 'users', action: 'show', id: current_user['id'] }, class: 'nav-item' %>
+      <% end %>
+    </div>
+  </div>
+</nav>
+

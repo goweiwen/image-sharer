@@ -52,3 +52,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+
+gem 'bulma-rails'
+gem 'font-awesome-rails'
+
+gem 'sinatra', github: 'sinatra/sinatra', branch: 'master'
+gem 'refile', require: 'refile/rails', github: 'refile/refile', branch: 'master'
+gem 'refile-s3', github: 'refile/refile-s3'

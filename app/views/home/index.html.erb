@@ -1,0 +1,22 @@
+<%= render 'shared/header' %>
+
+<div class="container">
+  <div class="tile is-ancestor is-vertical">
+    <% Image.all.each_slice(3) do |row| %>
+        <div class="tile">
+          <% row.each do |image| %>
+              <div class="tile is-4 is-parent">
+                <div class="tile is-child card">
+                  <div class="card-image">
+                    <%= image_tag "http://goweiwen-cookpad.s3.amazonaws.com/store/#{image.src_id}", class: 'is-fullwidth' %>
+                  </div>
+                  <p class="card-content is-pulled-right">
+                    by <%= link_to image.user.email, { controller: :users, action: :show, id: image.user } %>
+                  </p>
+                </div>
+              </div>
+          <% end %>
+        </div>
+    <% end %>
+  </div>
+</div>
